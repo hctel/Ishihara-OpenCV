@@ -24,21 +24,15 @@ if __name__ == "__main__":
         if key == 27:
             break
         if key == 32:
-            print("calculating...")
             img, circles = detect_circles(frame)
             if circles is not None:
-                print(len(circles))
                 img = clustering(img)
                 img = dilate_erode(img, 19)
                 previousResultImg = cv2.cvtColor(img.copy(), cv2.COLOR_GRAY2BGR)
                 cv2.imshow("Detected number", img)
                 number = getNumber(img)
                 lastNumber = number
-                if number is not None:
-                    print("Detected number:", number)
-                else:
-                    print("No valid number detected.")
             else:
-                print("No circles detected, try again.")
+                lastNumber = "No circles detected."
     cam.release()
     cv2.destroyAllWindows()
