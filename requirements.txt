@@ -1,6 +1,4 @@
 scikit-learn
-matplotlib
 numpy
 opencv-python
 pytesseract
-glob

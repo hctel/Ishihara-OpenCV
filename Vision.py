@@ -1,6 +1,4 @@
-import glob
 import numpy as np
-import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 import cv2
 
@@ -212,19 +210,4 @@ def dilate_erode(img, size):
     #return img
 
 if __name__ == "__main__":
-    imgname = "Ishihara_38.jpg"
-    for imgname in glob.glob("Ishihara_*"):
-        print("Loading image:", imgname)
-        img = cv2.imread(imgname, 1)
-        img = preprocess_image(img)
-        img = detect_circles(img)
-        if img is None:
-            print("No circles detected, skipping image.")
-        else:
-            clustering(img)
-        key = cv2.waitKey(0)
-        if key == ord("n"):
-            continue
-        else:
-            break
-    cv2.destroyAllWindows()
+    print("Please run Runner.py only.")
