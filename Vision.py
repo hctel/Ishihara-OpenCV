@@ -43,6 +43,11 @@ def preprocess_image(img):
     return img
 
 def clustering(img):
+    #
+    #
+    # NOTE: This code was adapted from https://nrsyed.com/2018/03/29/image-segmentation-via-k-means-clustering-with-opencv-python/.
+    #
+    #
     img = cv2.cvtColor(img, cv2.COLOR_BGR2YCrCb)
     img = img[:,:,[1]] # Keeps only the Cr channel (red difference)
     if len(img.shape) == 2:
@@ -58,7 +63,7 @@ def clustering(img):
         kmeansImage[clustering == label] = 255 * i
     # cv2.imshow('Original vs clustered', kmeansImage)
     return kmeansImage
-    
+   
     # pixels = img.reshape((-1, 3))
     # pixels = np.float32(pixels)
     # criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 10, 1.0)
