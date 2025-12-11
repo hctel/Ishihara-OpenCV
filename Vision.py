@@ -191,9 +191,6 @@ def coulour_highlight_forcerbg(img, target_rgb):
 def get_rgbstr_from_tuple(rgbtuple):
     return "{}:{}:{}".format(rgbtuple[0], rgbtuple[1], rgbtuple[2])
 
-def get_bounds_from_hsv_count(hsv, count):
-    pass
-
 def uint8hsvtohsv(hsv):
     h = int(360*(hsv[0]/255))
     s = int(100*(hsv[1]/255))
