@@ -4,14 +4,6 @@ import cv2
 
 PROJECT_NAME = "Gabriel" # Because, during early development, the program read a "71" instead of a "74" on plate Ishihara_9.png, being colorlind in the same way as Gabriel, my boyfriend :3.
 
-TARGET_SIZE_X = 750
-TARGET_SIZE_Y = 750
-
-BLUR = True
-BLUR_SIZE = 7
-DILATE = True
-DILATE_SIZE = 1
-
 def detect_circles(img):
     gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
     blur = cv2.Laplacian(gray, cv2.CV_8UC1)
@@ -28,17 +20,6 @@ def detect_circles(img):
         img = cv2.bitwise_and(img, img, mask=mask)
         # cv2.imshow("Circle Masked Image", img)
     return img, circles
-
-def preprocess_image(img):
-    # img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
-    img = cv2.resize(img, (TARGET_SIZE_X, TARGET_SIZE_Y), interpolation=cv2.INTER_AREA)
-    if DILATE:
-        elem = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (2*DILATE_SIZE, 2*DILATE_SIZE) , (DILATE_SIZE, DILATE_SIZE))
-        img = cv2.dilate(img, elem)
-    if BLUR:
-        img = cv2.GaussianBlur(img, (BLUR_SIZE, BLUR_SIZE), 0)
-    cv2.imshow("Preprocessed Image", cv2.cvtColor(img, cv2.COLOR_RGB2BGR))
-    return img
 
 def clustering(img):
     #
@@ -75,6 +56,8 @@ def clustering(img):
     # plt.scatter(center[:,0],center[:,1],s = 80,c = 'y', marker = 's')
     # plt.xlabel('Height'),plt.ylabel('Weight')
     # plt.show()
+
+## OLD FUNCTIONS, KEPT FOR INFO ONLY
 
 def coulour_highlight(img):
     rgbcodes={}
