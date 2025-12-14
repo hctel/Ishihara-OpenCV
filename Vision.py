@@ -2,7 +2,7 @@ import numpy as np
 from sklearn.cluster import KMeans
 import cv2
 
-PROJECT_NAME = "Gabriel" # Because, during early development, the program read a "71" instead of a "74" on plate Ishihara_9.png, being colorlind in the same way as Gabriel, my boyfriend.
+PROJECT_NAME = "Gabriel" # Because, during early development, the program read a "71" instead of a "74" on plate Ishihara_9.png, being colorlind in the same way as Gabriel, my boyfriend :3.
 
 TARGET_SIZE_X = 750
 TARGET_SIZE_Y = 750
