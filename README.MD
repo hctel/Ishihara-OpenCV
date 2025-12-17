@@ -17,4 +17,4 @@ To start the program, type `py Runner.py`.
 To capture and process a frame, simply press the spacebar and wait.
 
 ## Report
-The project report is both available in markdown ([report.md](report.md)) and as a PDF file ([report.pdf](report.pdf)).
+The project report is both available as a PDF file ([report.pdf](report.pdf)).
