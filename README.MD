@@ -1,5 +1,5 @@
 # Ishihara-OpenCV
-This repository was created as my 2025 end-of-year project for the ECAM's Computer Vision II course.
+This repository was created as my 2025 end-of-year project for the ECAM's Image Processing II course.
 
 **IMPORTANT NOTE:** This projects uses and requires the tesseract-ocr program to convert images into text. It should be downloaded from [this link](https://github.com/tesseract-ocr/tesseract/releases/download/5.5.0/tesseract-ocr-w64-setup-5.5.0.20241111.exe) and installed in C:\Program Files\Tesseract-OCR\.
 
